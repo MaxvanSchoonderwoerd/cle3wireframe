@@ -7,8 +7,8 @@
 }
 
 html {
-    font-family: "Roboto Light";
-    font-family: sans-serif;
+    font-family: Futura;
+    height: 100%;
     color: #d3d3d3;
     background-color: #181818;
 }
@@ -23,7 +23,12 @@ a {
 }
 
 .container {
-    max-width: 100vw;
+    /*max-width: 100vw;*/
+    /*margin: 0 auto;*/
+    /*overflow: auto;*/
+
+
+    max-width: 1100px;
     margin: 0 auto;
     overflow: auto;
     padding: 0 40px;
@@ -42,26 +47,27 @@ a {
 /*body*/
 
 ul {
-    width: 80vw;
-    min-height: 80vw;
     margin: 0;
     padding: 0;
+    width: 80vw;
+    height: 80vh;
     list-style-type: none;
+
+    /*grid*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+li {
+    margin: 10px 2.5vw;
+    padding: 10px;
+    font-size: 3rem;
+
 
     /*flex*/
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-li {
-
-    margin: 20px 0;
-    padding: 10px;
-    font-size: 5rem;
-    display: flex;
-    flex-direction: row;
+    align-items: center;
 
     /*card*/
     background-color: #4f4f4f;
@@ -76,22 +82,15 @@ li img {
     max-height: 100px;
 }
 
-.checked .unChecked i {
-    font-size: 75px;
-
-
-}
 
 .checked {
-    position: absolute;
     color: lightgreen;
-    right: 60px
+    font-size: 5rem;
 }
 
 .unChecked {
-    position: absolute;
     color: lightcoral;
-    right: 75px;
+    font-size: 5rem;
 }
 
 /*keuzes page*/
@@ -124,7 +123,7 @@ li img {
 .keuzesBtn {
     padding: 50px 0;
     margin: 10px;
-    font-size: 100px;
+    font-size: 3rem;
     color: #333333;
 
     border: 5px solid #333333;
@@ -176,7 +175,7 @@ li img {
 }
 
 .navBtn {
-    padding: 10px;
+    /*padding: 10px;*/
     margin: 0 10px;
     background-color: #4f4f4f;
     box-shadow: 0 5px 0 black;
@@ -184,12 +183,26 @@ li img {
 }
 
 .navLink {
-    display: block;
+    display: flex;
     width: 3em;
+    justify-content: center;
+    align-items: center;
+}
+
+.redText p {
+    display: none;
+}
+
+.greenText p {
+    display: none;
+}
+
+.blueText p {
+    display: none;
 }
 
 @media only screen and (min-width: 992px) {
-    .header{
+    .header {
         font-size: 2rem;
     }
 
@@ -197,19 +210,23 @@ li img {
         margin-left: 100px;
     }
 
+    /*polls menu */
     ul {
-        width: 100vw;
+
     }
 
 
     li {
         font-size: 1rem;
+
+        margin: 10px;
     }
 
-
+    /*navigation menu*/
     .nav {
         flex-direction: column;
         justify-content: flex-start;
+        align-items: flex-start;
 
         height: 100vh;
         width: 10vh;
@@ -221,13 +238,60 @@ li img {
 
     .navBtn {
         margin: 20px 0;
-        padding: 20px 0;
     }
 
-    .navBtn:hover {
+    .navLink {
+        height: 3em;
+    }
+
+    /*hover effects*/
+    .redText:hover p{
+        display: inline;
+    }
+
+    .greenText:hover p {
+        display: inline;
+
+    }
+
+    .blueText:hover p {
+        display: inline;
+
+    }
+
+
+    .redText:hover {
+
+        transition: ease-in-out 0.2s;
         background-color: #454545;
+        color: lightcoral;
+
+        border-radius: 10px;
+
+        width: 100px;
     }
 
+    .greenText:hover {
+        transition: ease-in-out 0.2s;
+        background-color: #454545;
+        color: lightgreen;
+
+        border-radius: 10px;
+
+        width: 100px;
+
+
+    }
+
+    .blueText:hover {
+        transition: ease-in-out 0.2s;
+        background-color: #454545;
+        color: lightblue;
+
+        border-radius: 10px;
+
+        width: 100px;
+    }
 
 }
 
