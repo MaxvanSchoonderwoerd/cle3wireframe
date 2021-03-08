@@ -193,13 +193,16 @@ li img {
         font-size: 2rem;
     }
 
+    .container {
+        margin-left: 100px;
+    }
+
     ul {
         width: 100vw;
     }
 
 
     li {
-        margin-left: 100px;
         font-size: 1rem;
     }
 
@@ -224,5 +227,7 @@ li img {
     .navBtn:hover {
         background-color: #454545;
     }
+
+
 }
 
