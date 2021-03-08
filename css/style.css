@@ -33,17 +33,13 @@ a {
 
 .header {
     font-size: 5rem;
-    background-color: #4f4f4f;
-    border-bottom: 10px solid #333333;
+    background-color: #333333;
 
-    text-shadow: 0.035em 0.035em 0px #333333;
+    text-shadow: 0.035em 0.035em 0 #333333;
 }
 
 
 /*body*/
-.body {
-
-}
 
 ul {
     width: 80vw;
@@ -73,18 +69,16 @@ li {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
 }
 
-li a {
-
-}
 
 li img {
     padding: 10px;
-    width: 100px;
-    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
 }
 
-i {
+.checked .unChecked i {
     font-size: 75px;
+
 
 }
 
@@ -157,31 +151,78 @@ i {
 /*navigation menu*/
 
 .nav {
-    position: fixed;
+
+    /*flex*/
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
+
+    /*positioning*/
+    position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
+    height: 10vw;
     padding: 10px;
+
+    /*color*/
     color: white;
-    background-color: #4f4f4f;
-    font-size: 2vw;
+    background-color: #333333;
     box-shadow: inset 0px -5px 10px 0px rgba(0, 0, 0, 0.5);
+
+    /*text*/
+    font-size: 4rem;
     overflow-wrap: break-word;
 }
 
 .navBtn {
-    border-radius: 10px;
     padding: 10px;
-    background-color: #333333;
     margin: 0 10px;
+    background-color: #4f4f4f;
     box-shadow: 0 5px 0 black;
+    border-radius: 10px;
 }
 
 .navLink {
     display: block;
-    width: 250px;
+    width: 3em;
+}
+
+@media only screen and (min-width: 992px) {
+    .header{
+        font-size: 2rem;
+    }
+
+    ul {
+        width: 100vw;
+    }
+
+
+    li {
+        margin-left: 100px;
+        font-size: 1rem;
+    }
+
+
+    .nav {
+        flex-direction: column;
+        justify-content: flex-start;
+
+        height: 100vh;
+        width: 10vh;
+        left: 0;
+        font-size: 1rem;
+
+        box-shadow: none;
+    }
+
+    .navBtn {
+        margin: 20px 0;
+        padding: 20px 0;
+    }
+
+    .navBtn:hover {
+        background-color: #454545;
+    }
 }
 
