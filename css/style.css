@@ -213,7 +213,7 @@ li a {
     .container {
         margin-left: 10vh;
         max-width: 80vw;
-        min-height: 100vh;
+        min-height: 100%;
         overflow: visible;
         padding: 0 0px;
     }
