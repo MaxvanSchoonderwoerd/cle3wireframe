@@ -82,6 +82,10 @@ li img {
     max-height: 100px;
 }
 
+li a {
+    width: 100%;
+}
+
 
 .checked {
     color: lightgreen;
@@ -250,6 +254,14 @@ li img {
     }
 
     /*hover effects*/
+    li:hover{
+
+        transition: transform ease-in-out 0.2s;
+        background-color: #737373;
+        transform: translateY(-0.5em);
+    }
+
+
     .redText:hover p{
         display: inline;
     }
